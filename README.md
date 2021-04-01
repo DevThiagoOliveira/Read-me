@@ -1,12 +1,20 @@
 #include<stdio.h>
+
 #include<stdlib.h>
+
 #include<locale.h>
+
 #include<time.h>
+
 #include<string.h>
+
 #include<conio.h>
+
+
 #define MAX 50
 
 typedef struct cadastro{
+
 	char nome[MAX];
 	char nomeAutor[MAX];
 	char editora[MAX];
@@ -16,18 +24,27 @@ typedef struct cadastro{
 	int ano;
 	char tipo[MAX];
 	int caixa;
+	
 } Inserir;
 
 
 void cabecalho();
+
 void cadastrar();
+
 void listarTodos();
+
 void saindo();
+
 void caixa();
+
 void pesquisarNome();
+
 void listarTipo();
 
+
 int main(){
+
 	Inserir cadastros[MAX];
 	setlocale(LC_ALL,"Portuguese");
 	
@@ -114,7 +131,10 @@ int main(){
 	return 0;
 }
 
-void listarTipo(){																				// Pesquisar por tipo de exemplar
+void listarTipo(){	
+
+// Pesquisar por tipo de exemplar
+
 	FILE* arquivo;
 	
 	arquivo = fopen("mapaAlgoritmo2.txt","r+");
@@ -152,6 +172,7 @@ void listarTipo(){																				// Pesquisar por tipo de exemplar
 }
 
 void caixa(){                                                                                   //Pesquisar por caixa
+
 	FILE* arquivo;
 	
 	arquivo = fopen("mapaAlgoritmo2.txt","r+");
@@ -188,13 +209,20 @@ void caixa(){                                                                   
 	fclose(arquivo);	
 }
 
-void cabecalho(){																				//Cabeçalho
+void cabecalho(){	
+
+//Cabeçalho
+
 	printf("+------------------------------------------------+");
 	printf("\n| Nome:Thiago Augusto Querino de Oliveira        |\n| RA:20060357-5                                  |\n| Curso:Bacharelado em Engenharia de Software    |\n");  
 	printf("+------------------------------------------------+\n");
+	
 }
 
-void pesquisarNome(){																			//Pesquisar por nome
+void pesquisarNome(){	
+
+//Pesquisar por nome
+
 	FILE* arquivo;
 	
 	arquivo = fopen("mapaAlgoritmo2.txt","r+");
@@ -231,7 +259,10 @@ void pesquisarNome(){																			//Pesquisar por nome
 	fclose(arquivo);
 }
 
-void saindo(){																					//Encremento de Saida
+void saindo(){		
+
+//Encremento de Saida
+
 	printf("\n\n\tSaindo.");
 	Sleep (1000);
 	system("cls");
@@ -243,7 +274,10 @@ void saindo(){																					//Encremento de Saida
 	system("cls");
 }
 
-void cadastrar(){																				//Cadastro de exemplares
+void cadastrar(){	
+
+//Cadastro de exemplares
+
 	FILE* arquivo;
 	Inserir rtr;
 	
@@ -288,7 +322,10 @@ void cadastrar(){																				//Cadastro de exemplares
 	fclose(arquivo);
 }
 
-void listarTodos(){																				//Listar todos os exemplares
+void listarTodos(){		
+
+//Listar todos os exemplares
+
 	FILE* arquivo;
 	Inserir rtr;
 	
