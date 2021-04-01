@@ -25,7 +25,7 @@ typedef struct cadastro{
 	char tipo[MAX];
 	int caixa;
 	
-} Inserir;
+	} Inserir;
 
 
 void cabecalho();
@@ -129,7 +129,7 @@ int main(){
 	}while((menu2 == 's' ) || (menu2 == 'S'));
 	system("pause");
 	return 0;
-}
+	}
 
 void listarTipo(){	
 
@@ -143,7 +143,6 @@ void listarTipo(){
 	char tipo[30];
 	char menu2 = 's';
 	
-		cabecalho();
 		if(arquivo == NULL){
 			printf("\n\tProblemas na abertura do arquivo!\n");
 		}else{
@@ -169,7 +168,7 @@ void listarTipo(){
 			getch();
 			system("cls");
 	fclose(arquivo);
-}
+	}
 
 void caixa(){                                                                                   //Pesquisar por caixa
 
@@ -181,7 +180,6 @@ void caixa(){                                                                   
 	int pesquisaCaixa;
 	char menu2 = 's';
 	
-		cabecalho();
 		if(arquivo == NULL){
 			printf("\n\tProblemas na abertura do arquivo!\n");
 		}else{
@@ -207,17 +205,8 @@ void caixa(){                                                                   
 			getch();
 			system("cls");
 	fclose(arquivo);	
-}
+	}
 
-void cabecalho(){	
-
-//Cabeçalho
-
-	printf("+------------------------------------------------+");
-	printf("\n| Nome:Thiago Augusto Querino de Oliveira        |\n| RA:20060357-5                                  |\n| Curso:Bacharelado em Engenharia de Software    |\n");  
-	printf("+------------------------------------------------+\n");
-	
-}
 
 void pesquisarNome(){	
 
@@ -257,7 +246,7 @@ void pesquisarNome(){
 			getch();
 			system("cls");
 	fclose(arquivo);
-}
+	}
 
 void saindo(){		
 
@@ -272,7 +261,7 @@ void saindo(){
 	printf("\n\n\tSaindo...");
 	Sleep (1000);
 	system("cls");
-}
+	}
 
 void cadastrar(){	
 
@@ -320,7 +309,7 @@ void cadastrar(){
 							
 	}
 	fclose(arquivo);
-}
+	}
 
 void listarTodos(){		
 
@@ -351,4 +340,5 @@ void listarTodos(){
 	fclose(arquivo);
 	getch();
 	system("cls");
-}
+	}
+	
