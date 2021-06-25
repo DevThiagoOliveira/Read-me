@@ -24,7 +24,7 @@ int main(void) {
 	grafotamanho();
 	menumostrar();
 	desenhargrafo();
-    grafodesenharmatriz();
+    	grafodesenharmatriz();
 	grafoinsercao();
 	grafodesenharmatriz();
 	desenhargrafo();
